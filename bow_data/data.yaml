@@ -1,0 +1,5 @@
+train: ../yolov5/bow_data/train/images
+val: ../yolov5/bow_data/valid/images
+
+nc: 3
+names: ['bad', 'good', 'goood']
