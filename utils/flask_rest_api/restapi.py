@@ -10,18 +10,18 @@ import torch
 from flask import Flask, request
 from PIL import Image
 
-app = Flask(__name__)
+app = Flask(__name__) #Create the Flask App
 
-DETECTION_URL = "/v1/object-detection/yolov5s"
+DETECTION_URL = "/v1/object-detection/yolov5s" #Accessing the model
 
-
-@app.route(DETECTION_URL, methods=["POST"])
+#Take an image, check if it's valid, run model, post image to website
+@app.route(DETECTION_URL, methods=["POST"]) 
 def predict():
     if not request.method == "POST":
         return
 
     if request.files.get("image"):
-        # Method 1
+        # Method 1po
         # with request.files["image"] as f:
         #     im = Image.open(io.BytesIO(f.read()))
 
